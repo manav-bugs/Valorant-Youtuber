@@ -1,0 +1,241 @@
+body{
+  background-color: #d6cece;
+  min-height: 100vh;
+}
+.box{
+  position: relative;
+  max-width: 30rem;
+  max-height: 50rem;
+  background: rgba(0, 0, 0, 75);
+}
+.App{
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110vh;
+  /* margin: 0px 500px; */
+}
+#home{
+  /* border: 2px solid red; */
+  position: absolute;
+  color: white;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  z-index: 2;
+}
+#home1{
+  /* border: 2px solid red; */
+  position: absolute;
+  color: black;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 100px;
+  text-align: center;
+  top: 100%;
+  z-index: 2;
+}
+@font-face {
+  font-family: valorant;
+  src: url(../public/Valorant\ Font.ttf);
+}
+.ytname{
+  font-family: valorant;
+}
+.font{
+  font-family: valorant;
+  font-size: 10rem;
+  text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(255, 0, 0);
+    animation: glow 0.11s ease-in-out infinite alternate linear;
+}
+ @keyframes glow {
+  0%{
+    text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(255, 0, 0);
+  }
+  50%{
+    text-shadow: 
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 84px rgb(255, 0, 0);
+  }
+  100%{
+    text-shadow: 
+  0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 42px rgb(255, 0, 0);
+  }
+
+  
+} 
+#myVideo {
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  min-height:100% ;
+  z-index: 1;
+  background-color: black;
+}
+.heading{
+  font-family: valorant;
+  position: relative;
+  height: 90px;
+  margin-bottom: 60px;
+  text-align: center;
+  color: white;
+  padding: 15px;
+  /* margin-top: 20px; */
+  counter-reset: white;
+  background-color: black;
+  z-index: 3;
+  width: 100%;
+}
+
+.card{
+  position: relative;
+  border: 2px solid rgb(223, 116, 116);
+  /* filter: blur(4px); */
+  background:linear-gradient(100deg, black,gray);
+  display: block;
+  margin: 1rem;
+  flex: 1 0 25rem;
+  max-width: 30rem;
+  max-height: 50rem;
+  transition: 0.2s;
+  z-index: 4;
+}
+.card::after{
+  filter: blur(40px);
+}
+.white{
+  color: white;
+}
+
+.card:hover{
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.75rem 1.5rem #770404;
+  /* filter: blur(0px); */
+}
+
+.img{
+  margin-top: 2rem; 
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+.content{
+  margin: 2rem;
+}
+.ytname{
+  font-size: 1.5rem;
+}
+.text{
+  font-size: 1.1rem;
+}
+@media screen and (max-width: 768px) {
+  .App{
+    display: grid;
+    grid-template-columns: 350px ;
+    justify-content: center;
+  } 
+  #home {
+    position: absolute;
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    top: 25%;
+    z-index: 2;
+    font-size: 50px;
+    font-weight: bold;
+}
+  #home1 {
+    position: absolute;
+    color: black;
+    /* margin-top: 20px; */
+    width: 100%;
+    text-align: center;
+    top: 62%;
+    z-index: 2;
+    font-size: 40px;
+    font-weight: bold;
+}
+  .img1{
+    height: 10px;
+  }
+  .heading {
+    position: relative;
+    height: 71px;
+    padding-top: 27px;
+    text-align: center;
+    color: white;
+    /* padding: 15px; */
+    counter-reset: white;
+    background-color: black;
+    z-index: 3;
+    width: 100%;
+    font-size: 23px;
+}
+#myVideo {
+  padding-top: 0px;
+  position: relative;
+  top: -86px;
+  height: 450px;
+  margin-top: 0px;
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+  z-index: 1;
+  background-color: black;
+}
+.font{
+  font-family: valorant;
+  text-shadow: 0 0 34px red, 0 0 75px red, 0 0 20px rgb(255, 0, 0);
+}
+  .App{
+    margin-top: 6vh;
+    /* margin: 0px 500px; */
+  }
+}
+@media screen and (max-width: 1068px) and  (min-width: 769px){
+  .App{
+    display: grid;
+    grid-template-columns: 350px 350px ;
+    justify-content: center;
+  } 
+}
+
+.glow::before,.glow::after{
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg,red,rgb(232, 14, 14),rgb(206, 25, 25),rgb(176, 36, 36),rgb(137, 79, 79),rgb(232, 14, 14));
+  background-size: 400%;
+  width: calc(100%+5px);
+  height: calc(100%+5px);
+  z-index: -1;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+    background-position: 0 0;
+  }
+  50%{
+    background-position: 400% 0;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+
+.glow::after{
+  filter: blur(40px);
+}
